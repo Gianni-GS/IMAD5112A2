@@ -3,6 +3,7 @@ package com.example.imad5111a2assignment
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -14,6 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.imad5111a2assignment.ui.theme.IMAD5111A2AssignmentTheme
+import kotlin.compareTo
+import kotlin.text.get
 
 class MainActivity : ComponentActivity() {
     private val questions = arrayOf(
@@ -109,5 +112,26 @@ class MainActivity : ComponentActivity() {
         val finalFeedback = findViewById<TextView>(R.id.finalFeedbackText)
         val reviewButton = findViewById<Button>(R.id.btnReview)
         val exitButton = findViewById<Button>(R.id.btnExit)
+
+        scoreText.text = "You scored $score out of ${questions.size}"
+        finalFeedback.text = if (score >=3) "You definitely know much about football !" else "Better luck next time !"
+
+        reviewButton.setOnClickListener {
+            val facts = questions.mapIndexed { index, q ->
+                "${index + 1}. $q\nAnswer: ${answers[index]}"
+            }.joinToString("\n\n")
+            Toast.makeText(this, facts, Toast.LENGTH_LONG).show()
+        }
+
+        exitButton.setOnClickListener {
+            finish()
+        }
+
+
+
+    }
+
+
+}
 
 
