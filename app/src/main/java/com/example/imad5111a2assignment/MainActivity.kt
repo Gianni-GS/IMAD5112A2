@@ -77,3 +77,17 @@ class MainActivity : ComponentActivity() {
         }
 
 
+        nextButton.setOnClickListener {
+            currentQuestion++
+            if (currentQuestion < questions.size) {
+                showQuestionScreen()
+
+            } else {
+                showScoreScreen()
+            }
+        }
+
+    }
+
+
+
