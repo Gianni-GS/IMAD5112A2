@@ -1,22 +1,12 @@
 package com.example.imad5111a2assignment
 
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.imad5111a2assignment.ui.theme.IMAD5111A2AssignmentTheme
-import kotlin.compareTo
-import kotlin.text.get
+
 
 class MainActivity : ComponentActivity() {
     private val questions = arrayOf(
@@ -39,8 +29,8 @@ class MainActivity : ComponentActivity() {
 
 
     private fun showWelcomeScreen() {
-        setContentView(layout.activity_main)
-        val startButton = findViewById<Button>(id.btnStart)
+        setContentView(R.layout.activity_main)
+        val startButton = findViewById<Button>(R.id.btnStart)
         startButton.setOnClickListener {
             currentQuestion = 0
             score = 0
@@ -50,7 +40,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun showQuestionScreen() {
-        setContentView(layout.activity_question1)
+        setContentView(R.layout.activity_question1)
 
         val questionText = findViewById<TextView>(R.id.questionText)
         val trueButton = findViewById<Button>(R.id.btnTrue)
