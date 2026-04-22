@@ -58,3 +58,12 @@ class MainActivity : ComponentActivity() {
         questionText.text = questions[currentQuestion]
         feedbackText.text = ""
         var answered = false
+
+
+        trueButton.setOnClickListener {
+            if (!answered) {
+                checkAnswer(true, feedbackText)
+                answered = true
+            }
+
+        }
