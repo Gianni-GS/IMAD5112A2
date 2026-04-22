@@ -2,6 +2,7 @@ package com.example.imad5111a2assignment
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -44,3 +45,16 @@ class MainActivity : ComponentActivity() {
             showQuestionScreen()
         }
     }
+
+    private fun showQuestionScreen() {
+        setContentView(layout.activity_question1)
+
+        val questionText = findViewById<TextView>(R.id.questionText)
+        val trueButton = findViewById<Button>(R.id.btnTrue)
+        val falseButton = findViewById<Button>(R.id.btnFalse)
+        val feedbackText = findViewById<TextView>(R.id.feedbackText)
+        val nextButton = findViewById<Button>(R.id.btnNext)
+
+        questionText.text = questions[currentQuestion]
+        feedbackText.text = ""
+        var answered = false
