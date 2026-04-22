@@ -102,5 +102,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun showScoreScreen() {
+        setContentView(R.layout.activity_score)
+
+        val scoreText = findViewById<TextView>(R.id.scoreText)
+        val finalFeedback = findViewById<TextView>(R.id.finalFeedbackText)
+        val reviewButton = findViewById<Button>(R.id.btnReview)
+        val exitButton = findViewById<Button>(R.id.btnExit)
 
 
