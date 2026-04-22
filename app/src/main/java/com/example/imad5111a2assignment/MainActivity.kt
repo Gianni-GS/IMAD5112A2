@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
     private val questions = arrayOf(
         "Is Football the most popular sport in the world ?",
         "Does Manchester United have 13 Premier League titles ?",
-        "Does Cristiano Ronaldo have 6 Ballon d'ors ?",
+        "Does Cristiano Ronaldo have 6 Ballon d'Ors ?",
         "Did Argentina win the 2022 FIFA World Cup in Qatar ?",
         "Is Real Madrid from France ?",
     )

@@ -29,7 +29,7 @@
             android:id="@+id/questionText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Does Cristiano Ronaldo have 6 Ballon d'ors ?"
+            android:text="Does Cristiano Ronaldo have 6 Ballon d'Ors ?"
             android:textSize="24dp"
             android:textColor="@color/white"
             android:shadowDx="3"
