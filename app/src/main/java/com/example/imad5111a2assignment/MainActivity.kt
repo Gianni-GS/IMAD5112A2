@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun showQuestionScreen() {
-        setContentView(layout.activity_question1)
+        setContentView(.layout.activity_question1)
 
         val questionText = findViewById<TextView>(R.id.questionText)
         val trueButton = findViewById<Button>(R.id.btnTrue)
