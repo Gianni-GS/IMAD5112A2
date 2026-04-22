@@ -1,24 +1,10 @@
-package com.example.imadproject2
+package com.example.imad5111a2assignment
 
-import android.R.attr.id
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.imad5111a2assignment.R.*
-import com.example.imad5111a2assignment.R.id.questionText
-import com.example.imad5111a2assignment.ui.theme.IMAD5111A2AssignmentTheme
-import org.w3c.dom.Text
 
 
 class MainActivity : ComponentActivity() {
@@ -76,7 +62,7 @@ class MainActivity : ComponentActivity() {
 
         falseButton.setOnClickListener {
             if (!answered) {
-                checkAnswer(true, feedbackText)
+                checkAnswer(false, feedbackText)
                 answered = false
             }
         }
@@ -93,6 +79,7 @@ class MainActivity : ComponentActivity() {
 
     }
 
+
     private fun checkAnswer(userAnswer: Boolean, feedbackText: TextView) {
         val correct = answers[currentQuestion]
         if (userAnswer == correct) {
@@ -106,6 +93,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+
     private fun showScoreScreen() {
         setContentView(R.layout.activity_score)
 
@@ -115,7 +103,7 @@ class MainActivity : ComponentActivity() {
         val exitButton = findViewById<Button>(R.id.btnExit)
 
         scoreText.text = "You scored $score out of ${questions.size}"
-        finalFeedback.text = if (score >=3) "You definitely know much about football !" else " Better luck next time !"
+        finalFeedback.text = if (score >=3) "You definitely know much about football !" else "Better luck next time !"
 
         reviewButton.setOnClickListener {
             val facts = questions.mapIndexed { index, q ->
