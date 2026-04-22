@@ -21,3 +21,9 @@ class MainActivity : ComponentActivity() {
         "Did Argentina win the 2022 FIFA World Cup in Qatar ?",
         "Is Real Madrid from France ?",
     )
+
+    private val answers = arrayOf(true, true, false, true, false)
+    private var currentQuestion = 0
+    private var score = 0
+    private val feedbackList = mutableListOf<String>()
+
