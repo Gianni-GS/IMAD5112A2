@@ -67,3 +67,13 @@ class MainActivity : ComponentActivity() {
             }
 
         }
+
+
+        falseButton.setOnClickListener {
+            if (!answered) {
+                checkAnswer(false, feedbackText)
+                answered = false
+            }
+        }
+
+
