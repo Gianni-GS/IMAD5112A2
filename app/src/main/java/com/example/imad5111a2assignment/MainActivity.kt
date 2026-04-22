@@ -1,5 +1,6 @@
-package com.example.imad5111a2assignment
+package com.example.imadproject2
 
+import android.R.attr.id
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -14,9 +15,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.imad5111a2assignment.ui.theme.IMAD5111A2AssignmentTheme
-import kotlin.compareTo
-import kotlin.text.get
+import com.example.imad5111a2assignment.R
+import com.example.imadproject2.R.*
+import com.example.imadproject2.R.id.questionText
+import com.example.imadproject2.ui.theme.IMADPROJECT2Theme
+import org.w3c.dom.Text
+
 
 class MainActivity : ComponentActivity() {
     private val questions = arrayOf(
@@ -32,15 +36,15 @@ class MainActivity : ComponentActivity() {
     private var score = 0
     private val feedbackList = mutableListOf<String>()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         showWelcomeScreen()
     }
 
-
     private fun showWelcomeScreen() {
-        setContentView(layout.activity_main)
-        val startButton = findViewById<Button>(id.btnStart)
+        setContentView(R.layout.activity_main)
+        val startButton = findViewById<Button>(R.id.btnStart)
         startButton.setOnClickListener {
             currentQuestion = 0
             score = 0
@@ -49,8 +53,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+
     private fun showQuestionScreen() {
-        setContentView(layout.activity_question1)
+        setContentView(R.layout.activity_question1)
 
         val questionText = findViewById<TextView>(R.id.questionText)
         val trueButton = findViewById<Button>(R.id.btnTrue)
@@ -62,7 +67,6 @@ class MainActivity : ComponentActivity() {
         feedbackText.text = ""
         var answered = false
 
-
         trueButton.setOnClickListener {
             if (!answered) {
                 checkAnswer(true, feedbackText)
@@ -71,14 +75,12 @@ class MainActivity : ComponentActivity() {
 
         }
 
-
         falseButton.setOnClickListener {
             if (!answered) {
-                checkAnswer(false, feedbackText)
+                checkAnswer(true, feedbackText)
                 answered = false
             }
         }
-
 
         nextButton.setOnClickListener {
             currentQuestion++
@@ -114,7 +116,7 @@ class MainActivity : ComponentActivity() {
         val exitButton = findViewById<Button>(R.id.btnExit)
 
         scoreText.text = "You scored $score out of ${questions.size}"
-        finalFeedback.text = if (score >=3) "You definitely know much about football !" else "Better luck next time !"
+        finalFeedback.text = if (score >=3) "You definitely know much about football !" else " Better luck next time !"
 
         reviewButton.setOnClickListener {
             val facts = questions.mapIndexed { index, q ->
@@ -133,5 +135,4 @@ class MainActivity : ComponentActivity() {
 
 
 }
-
 
