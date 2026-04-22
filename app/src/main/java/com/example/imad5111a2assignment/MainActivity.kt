@@ -27,3 +27,7 @@ class MainActivity : ComponentActivity() {
     private var score = 0
     private val feedbackList = mutableListOf<String>()
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        showWelcomeScreen()
+    }
