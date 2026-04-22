@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/footballstadiumnight"
+        >
+
+    </LinearLayout>
+    <!-- Glass Card -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:background="#40FFFFFF"
+        android:elevation="10dp"
+        >
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did Argentina win the 2022 FIFA World Cup in Qatar ?"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:shadowColor="@color/black"
+            />
+
+        <!--Input Field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        </LinearLayout>
+
+
+        <!-- True Button -->
+        <Button
+            android:id="@+id/btnTrue"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="True"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+
+
+        <!-- False Button -->
+        <Button
+            android:id="@+id/btnFalse"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="false"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+
+        <!--Feedback -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct/Incorrect!"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:shadowColor="@color/black"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            />
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="next"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+</FrameLayout>
