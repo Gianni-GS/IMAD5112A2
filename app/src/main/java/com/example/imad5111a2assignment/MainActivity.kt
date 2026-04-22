@@ -1,6 +1,7 @@
 package com.example.imad5111a2assignment
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -30,4 +31,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         showWelcomeScreen()
+    }
+
+
+    private fun showWelcomeScreen() {
+        setContentView(layout.activity_main)
+        val startButton = findViewById<Button>(id.btnStart)
+        startButton.setOnClickListener {
+            currentQuestion = 0
+            score = 0
+            feedbackList.clear()
+            showQuestionScreen()
+        }
     }
