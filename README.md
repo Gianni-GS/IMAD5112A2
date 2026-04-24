@@ -14,7 +14,9 @@ YouTube Link: https://youtu.be/0pBK2fg2B-g
 
 #Referencing My app was made using Kotlin in Android Studio.
 Figure 1: Coding (Medium, 2012)
+
 Figure 2: Football Stadium Wallpaper (Source: Freepik)
+
 Figure 3: GitHub actions (Source: GitHub)
 
 #Referencing List:
