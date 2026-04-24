@@ -10,12 +10,14 @@ The objective of this assignment was to create an Android App using Kotlin to he
 
 GitHub Link: https://github.com/Gianni-GS/IMAD5112A2-Assignment.git
 
+YouTube Link: https://youtu.be/0pBK2fg2B-g
+
 #Referencing My app was made using Kotlin in Android Studio.
 Figure 1: Coding (Medium, 2012)
 Figure 2: Football Stadium Wallpaper (Source: Freepik)
 Figure 3: GitHub actions (Source: GitHub)
 
-#Referencing List 
+#Referencing List:
 
 Freepik, 2019. Football Stadium Wallpaper. Available at: https://www.freepik.com/free-ai-image/football-stadium-night_417436824.htm#fromView=keyword&page=1&position=3&uuid=d19136e9-49f6-487f-86fd-38a9772e1452&query=Vertical+football+stadium [Accessed 23 April 2026]
 
