@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to my Football Quiz App, My app is to test your football knowlegde to if you are a true soccer fan."
+            android:text="Welcome to my Football Quiz App, My app is to test your football knowlegde to if you are a true football fan."
             android:textSize="30dp"
             android:textColor="@color/white"
             android:textStyle="italic"

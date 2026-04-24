@@ -32,10 +32,11 @@
             android:text="Is Football the most popular sport in the world ?"
             android:textSize="24dp"
             android:textColor="@color/white"
-            android:shadowDx="3"
-            android:shadowDy="3"
+            android:shadowDx="5"
+            android:shadowDy="5"
             android:shadowRadius="5"
             android:shadowColor="#151A2B"
+            android:layout_marginBottom="40dp"
             />
 
         <!--Input Field -->
